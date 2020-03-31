@@ -1,0 +1,321 @@
+/*! project-name v0.0.1 | (c) 2020 Francuski Miroslav | MIT License | http://link-to-your-git-repo.com */
+@import url("https://fonts.googleapis.com/css?family=Barlow&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Barlow+Condensed:400,700&display=swap");
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-Light.otf");
+  src: url("../fonts/Gilroy-ExtraBold.otf");
+}
+
+/* line 1, src/sass/components/_print.scss */
+.test-print {
+  width: 50%;
+}
+
+/* line 2, src/sass/components/_mixins.scss */
+html {
+  scroll-behavior: smooth;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Barlow", sans-serif, "Barlow Condensed", cursive, Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* line 8, src/sass/components/_mixins.scss */
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 16, src/sass/components/_mixins.scss */
+ul,
+ol {
+  list-style: none;
+}
+
+/* line 21, src/sass/components/_mixins.scss */
+a {
+  text-decoration: none;
+}
+
+/* line 25, src/sass/components/_mixins.scss */
+nav a {
+  color: #242942;
+}
+
+/* line 29, src/sass/components/_mixins.scss */
+.btn {
+  border: 1px solid #242942;
+  color: #242942;
+  padding: 1em 2em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 30px auto;
+  cursor: pointer;
+}
+
+/* line 7, src/sass/style.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+button,
+nav a {
+  font-family: "Barlow Condensed", cursive;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* line 21, src/sass/style.scss */
+body {
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* line 25, src/sass/style.scss */
+body::before {
+  content: "";
+  height: 50vh;
+  width: 50vw;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #eef3f6;
+  z-index: -5;
+  border-bottom-left-radius: 50px;
+}
+
+/* line 38, src/sass/style.scss */
+header {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 150px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  z-index: 1;
+}
+
+/* line 46, src/sass/style.scss */
+header .main-nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* line 51, src/sass/style.scss */
+header .main-nav ul li {
+  margin-left: 40px;
+}
+
+/* line 54, src/sass/style.scss */
+header .main-nav ul li:hover:not(:last-child) {
+  border-bottom: 1px solid #000000;
+}
+
+/* line 59, src/sass/style.scss */
+header .main-nav ul .circle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  background-color: #a0a1ac;
+}
+
+/* line 67, src/sass/style.scss */
+header .main-nav ul .login {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* line 70, src/sass/style.scss */
+header .main-nav ul .login a {
+  color: #a0a1ac;
+}
+
+/* line 72, src/sass/style.scss */
+header .main-nav ul .login a:hover {
+  color: rgba(160, 161, 172, 0.5);
+  border-bottom: 1px solid rgba(160, 161, 172, 0.5);
+}
+
+/* line 80, src/sass/style.scss */
+header .menu-btn {
+  display: none;
+}
+
+/* line 85, src/sass/style.scss */
+main {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-height: calc(100vh - 230px);
+  z-index: -1;
+  width: 100%;
+}
+
+/* line 94, src/sass/style.scss */
+main .left {
+  width: 50%;
+  padding: 50px 0;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
+}
+
+/* line 103, src/sass/style.scss */
+main .left h3 {
+  color: #a0a1ac;
+  letter-spacing: 6px;
+  margin-bottom: 30px;
+}
+
+/* line 108, src/sass/style.scss */
+main .left h3 button {
+  outline: none;
+  border-radius: 50px;
+  padding: 5px 15px;
+  color: #ffffff;
+  background-color: #000000;
+  margin-right: 10px;
+  border: none;
+}
+
+/* line 119, src/sass/style.scss */
+main .left h1 {
+  font-size: 50px;
+  margin-bottom: 45px;
+}
+
+/* line 124, src/sass/style.scss */
+main .left .text {
+  color: #a0a1ac;
+  font-weight: 700;
+  margin-bottom: 70px;
+}
+
+/* line 131, src/sass/style.scss */
+main .left .btn-text .btn {
+  border: none;
+  border-radius: 10px;
+  background-color: #ff5c5c;
+  color: #ffffff;
+  margin-right: 20px;
+  padding: 20px 35px;
+  font-size: 10px;
+}
+
+/* line 140, src/sass/style.scss */
+main .left .btn-text .btn:hover {
+  background-color: rgba(255, 92, 92, 0.5);
+}
+
+/* line 145, src/sass/style.scss */
+main .left .btn-text span {
+  color: #a0a1ac;
+  letter-spacing: 8px;
+  font-size: 10px;
+}
+
+/* line 153, src/sass/style.scss */
+main .right {
+  width: 50%;
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/* line 159, src/sass/style.scss */
+main .right img {
+  max-width: 100%;
+  -webkit-transform: scale(2) translateX(25%);
+          transform: scale(2) translateX(25%);
+}
+
+/* line 166, src/sass/style.scss */
+.footer {
+  min-height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/* line 171, src/sass/style.scss */
+.footer .attribution {
+  color: #000000;
+  text-align: center;
+}
+
+/* line 174, src/sass/style.scss */
+.footer .attribution a,
+.footer .attribution a:visited,
+.footer .attribution a:active {
+  color: #ff5c5c;
+}
+
+/* line 179, src/sass/style.scss */
+.footer .attribution a:hover,
+.footer .attribution a:visited:hover,
+.footer .attribution a:active:hover {
+  color: rgba(91, 95, 113, 0.5);
+}
