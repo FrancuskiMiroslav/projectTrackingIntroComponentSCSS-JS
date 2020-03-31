@@ -1,0 +1,34 @@
+$main_font: "Barlow", sans-serif;
+$secondary_font: "Barlow Condensed", cursive;
+
+@import url("https://fonts.googleapis.com/css?family=Barlow&display=swap");
+
+@import url("https://fonts.googleapis.com/css?family=Barlow+Condensed:400,700&display=swap");
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-Light.otf");
+  src: url("../fonts/Gilroy-ExtraBold.otf");
+}
+
+$red: hsl(0, 100%, 68%);
+$veryDarkBlue: hsl(230, 29%, 20%);
+$darkGrayishBlue: hsl(230, 11%, 40%);
+$grayishBlue: hsl(231, 7%, 65%);
+$lightGrayishBlue: hsl(207, 33%, 95%);
+
+$primary_clr: $red;
+$secondary_clr: $darkGrayishBlue;
+$tertiary_clr: $veryDarkBlue;
+
+$show-image: true;
+$home-image: url(../images/home-bg-min.jpg);
+$background-opacity: 0.85;
+
+$fw-normal: 400;
+$fw-bold: 700;
+
+$min_width: 320px;
+$max_width: 3840px;
+$min_font: 14px;
+$max_font: 24px;
