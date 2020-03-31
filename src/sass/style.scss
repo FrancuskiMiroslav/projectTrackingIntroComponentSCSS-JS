@@ -38,7 +38,7 @@ body {
 header {
   @include wrapper(1170, 30);
   display: flex;
-  min-height: 150px;
+  min-height: 15vh;
   align-items: center;
   justify-content: space-between;
   z-index: 1;
@@ -87,13 +87,13 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: calc(100vh - 230px);
+  min-height: 80vh;
   z-index: -1;
   width: 100%;
 
   .left {
     width: 50%;
-    padding: 50px 0;
+    padding-top: 50px;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -117,7 +117,7 @@ main {
     }
 
     h1 {
-      font-size: 50px;
+      font-size: 64px;
       margin-bottom: 45px;
     }
 
@@ -135,7 +135,7 @@ main {
         color: #ffffff;
         margin-right: 20px;
         padding: 20px 35px;
-        font-size: 10px;
+        font-size: 16px;
 
         &:hover {
           background-color: rgba($color: $primary_clr, $alpha: 0.5);
@@ -144,15 +144,15 @@ main {
 
       span {
         color: $grayishBlue;
-        letter-spacing: 8px;
-        font-size: 10px;
+        letter-spacing: 4px;
+        font-weight: 400;
+        font-size: 16px;
       }
     }
   }
 
   .right {
     width: 50%;
-    align-self: stretch;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -164,7 +164,7 @@ main {
 }
 
 .footer {
-  min-height: 80px;
+  min-height: 5vh;
   display: flex;
   align-items: center;
   justify-content: center;
