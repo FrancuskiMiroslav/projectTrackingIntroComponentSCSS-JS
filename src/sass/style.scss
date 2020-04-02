@@ -57,7 +57,7 @@ header {
       flex-wrap: wrap;
 
       @include media-max-width(700) {
-        display: none;
+        transform: scale(0);
         position: absolute;
         top: 80px;
         left: 30px;
@@ -65,6 +65,9 @@ header {
         width: calc(100% - 60px);
         background-color: #ffffff;
         padding-top: 30px;
+        transform-origin: top;
+        transition: 1s linear;
+        flex-direction: column;
       }
 
       li {
@@ -76,6 +79,7 @@ header {
 
         @include media-max-width(700) {
           margin-bottom: 30px;
+          margin-left: 0;
         }
       }
 
@@ -85,6 +89,16 @@ header {
         width: 6px;
         border-radius: 50%;
         background-color: $grayishBlue;
+        &:hover:not(:last-child) {
+          border-bottom: 3px solid $grayishBlue;
+        }
+
+        @include media-max-width(700) {
+          border-bottom: 2px solid $grayishBlue;
+          width: calc(100% - 60px);
+          height: 0;
+          border-radius: 0;
+        }
       }
 
       .login {
@@ -114,12 +128,17 @@ header {
   }
 
   .show {
-    display: flex;
-    flex-direction: column;
+    @include media-max-width(700) {
+      display: flex;
+      flex-direction: column;
+      transform: scale(1);
+    }
   }
 
   .hide {
-    display: none;
+    @include media-max-width(700) {
+      display: none;
+    }
   }
 }
 
@@ -229,7 +248,7 @@ main {
       transform: scale(2) translateX(25%);
 
       @include media-max-width(700) {
-        transform: scale(1.5) translateX(77px) translateY(20px);
+        transform: scale(1.3) translateX(7%) translateY(0px);
       }
     }
   }

@@ -8,17 +8,11 @@ window.onload = function() {
   const menuBtnClose = document.getElementById("btn-close");
   const menuNav = document.getElementById("menu-nav");
 
-  console.log(window.innerWidth);
+  console.log(window.screen.width);
 
   menuBtn.addEventListener("click", () => {
-    if (window.innerWidth <= 947) {
-      menuNav.classList.toggle("show");
-      menuBtnClose.classList.toggle("show");
-      menuBtnOpen.classList.toggle("hide");
-    } else {
-      menuNav.classList.remove("show");
-      menuBtnClose.classList.remove("show");
-      menuBtnOpen.classList.remove("hide");
-    }
+    menuNav.classList.toggle("show");
+    menuBtnClose.classList.toggle("show");
+    menuBtnOpen.classList.toggle("hide");
   });
 };
