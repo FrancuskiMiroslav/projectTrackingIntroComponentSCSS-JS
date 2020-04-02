@@ -41,18 +41,41 @@ header {
   min-height: 15vh;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   z-index: 1;
+  position: relative;
+
+  @include media-max-width(700) {
+    margin-bottom: 10%;
+  }
+
   .main-nav {
-    ul {
+    &__list {
       display: flex;
       justify-content: center;
       align-items: center;
+      flex-wrap: wrap;
+
+      @include media-max-width(700) {
+        display: none;
+        position: absolute;
+        top: 80px;
+        left: 30px;
+        border-radius: 5px;
+        width: calc(100% - 60px);
+        background-color: #ffffff;
+        padding-top: 30px;
+      }
 
       li {
         margin-left: 40px;
 
         &:hover:not(:last-child) {
           border-bottom: 1px solid #000000;
+        }
+
+        @include media-max-width(700) {
+          margin-bottom: 30px;
         }
       }
 
@@ -78,6 +101,24 @@ header {
     }
   }
   .menu-btn {
+    display: none;
+
+    @include media-max-width(700) {
+      display: block;
+      cursor: pointer;
+    }
+
+    &__close {
+      display: none;
+    }
+  }
+
+  .show {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hide {
     display: none;
   }
 }
@@ -188,7 +229,7 @@ main {
       transform: scale(2) translateX(25%);
 
       @include media-max-width(700) {
-        transform: scale(1.5) translateX(12%) translateY(20px);
+        transform: scale(1.5) translateX(77px) translateY(20px);
       }
     }
   }
@@ -196,7 +237,7 @@ main {
 
 .footer {
   min-height: 5vh;
-  padding: 30px;
+  padding: 0 30px;
   display: flex;
   align-items: center;
   justify-content: center;
