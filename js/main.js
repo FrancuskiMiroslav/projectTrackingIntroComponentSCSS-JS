@@ -4,12 +4,22 @@ $(document).ready((function() {
 }));
 
 window.onload = function() {
-  document.addEventListener(
-    "click",
-    (function(event) {
-      if (!event.target.matches("#click-me")) return;
-      alert("You clicked me!");
-    }),
-    false
-  );
+  const menuBtn = document.getElementById("menu-btn");
+  const menuBtnOpen = document.getElementById("btn-open");
+  const menuBtnClose = document.getElementById("btn-close");
+  const menuNav = document.getElementById("menu-nav");
+
+  console.log(window.innerWidth);
+
+  menuBtn.addEventListener("click", () => {
+    if (window.innerWidth <= 947) {
+      menuNav.classList.toggle("show");
+      menuBtnClose.classList.toggle("show");
+      menuBtnOpen.classList.toggle("hide");
+    } else {
+      menuNav.classList.remove("show");
+      menuBtnClose.classList.remove("show");
+      menuBtnOpen.classList.remove("hide");
+    }
+  });
 };

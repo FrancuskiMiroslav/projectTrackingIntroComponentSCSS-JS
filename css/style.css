@@ -108,11 +108,21 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   z-index: 1;
+  position: relative;
 }
 
-/* line 46, src/sass/style.scss */
-header .main-nav ul {
+@media (max-width: 700px) {
+  /* line 38, src/sass/style.scss */
+  header {
+    margin-bottom: 10%;
+  }
+}
+
+/* line 53, src/sass/style.scss */
+header .main-nav__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -122,20 +132,43 @@ header .main-nav ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-/* line 51, src/sass/style.scss */
-header .main-nav ul li {
+@media (max-width: 700px) {
+  /* line 53, src/sass/style.scss */
+  header .main-nav__list {
+    display: none;
+    position: absolute;
+    top: 80px;
+    left: 30px;
+    border-radius: 5px;
+    width: calc(100% - 60px);
+    background-color: #ffffff;
+    padding-top: 30px;
+  }
+}
+
+/* line 70, src/sass/style.scss */
+header .main-nav__list li {
   margin-left: 40px;
 }
 
-/* line 54, src/sass/style.scss */
-header .main-nav ul li:hover:not(:last-child) {
+/* line 73, src/sass/style.scss */
+header .main-nav__list li:hover:not(:last-child) {
   border-bottom: 1px solid #000000;
 }
 
-/* line 59, src/sass/style.scss */
-header .main-nav ul .circle {
+@media (max-width: 700px) {
+  /* line 70, src/sass/style.scss */
+  header .main-nav__list li {
+    margin-bottom: 30px;
+  }
+}
+
+/* line 82, src/sass/style.scss */
+header .main-nav__list .circle {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -145,8 +178,8 @@ header .main-nav ul .circle {
   background-color: #a0a1ac;
 }
 
-/* line 67, src/sass/style.scss */
-header .main-nav ul .login {
+/* line 90, src/sass/style.scss */
+header .main-nav__list .login {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -155,23 +188,52 @@ header .main-nav ul .login {
           align-items: center;
 }
 
-/* line 70, src/sass/style.scss */
-header .main-nav ul .login a {
+/* line 93, src/sass/style.scss */
+header .main-nav__list .login a {
   color: #a0a1ac;
 }
 
-/* line 72, src/sass/style.scss */
-header .main-nav ul .login a:hover {
+/* line 95, src/sass/style.scss */
+header .main-nav__list .login a:hover {
   color: rgba(160, 161, 172, 0.5);
   border-bottom: 1px solid rgba(160, 161, 172, 0.5);
 }
 
-/* line 80, src/sass/style.scss */
+/* line 103, src/sass/style.scss */
 header .menu-btn {
   display: none;
 }
 
-/* line 85, src/sass/style.scss */
+@media (max-width: 700px) {
+  /* line 103, src/sass/style.scss */
+  header .menu-btn {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+/* line 111, src/sass/style.scss */
+header .menu-btn__close {
+  display: none;
+}
+
+/* line 116, src/sass/style.scss */
+header .show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+/* line 121, src/sass/style.scss */
+header .hide {
+  display: none;
+}
+
+/* line 126, src/sass/style.scss */
 main {
   max-width: 1170px;
   margin: 0 auto;
@@ -191,7 +253,7 @@ main {
 }
 
 @media (max-width: 700px) {
-  /* line 85, src/sass/style.scss */
+  /* line 126, src/sass/style.scss */
   main {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -200,7 +262,7 @@ main {
   }
 }
 
-/* line 98, src/sass/style.scss */
+/* line 139, src/sass/style.scss */
 main .left {
   width: 50%;
   padding-top: 50px;
@@ -220,13 +282,13 @@ main .left {
 }
 
 @media (max-width: 700px) {
-  /* line 98, src/sass/style.scss */
+  /* line 139, src/sass/style.scss */
   main .left {
     width: 100%;
   }
 }
 
-/* line 111, src/sass/style.scss */
+/* line 152, src/sass/style.scss */
 main .left h3 {
   color: #a0a1ac;
   letter-spacing: 6px;
@@ -234,14 +296,14 @@ main .left h3 {
 }
 
 @media (max-width: 700px) {
-  /* line 111, src/sass/style.scss */
+  /* line 152, src/sass/style.scss */
   main .left h3 {
     letter-spacing: 2px;
     margin-bottom: 15px;
   }
 }
 
-/* line 120, src/sass/style.scss */
+/* line 161, src/sass/style.scss */
 main .left h3 button {
   outline: none;
   border-radius: 50px;
@@ -252,21 +314,21 @@ main .left h3 button {
   border: none;
 }
 
-/* line 131, src/sass/style.scss */
+/* line 172, src/sass/style.scss */
 main .left h1 {
   font-size: 64px;
   margin-bottom: 45px;
 }
 
 @media (max-width: 700px) {
-  /* line 131, src/sass/style.scss */
+  /* line 172, src/sass/style.scss */
   main .left h1 {
     font-size: 30px;
     margin-bottom: 20px;
   }
 }
 
-/* line 141, src/sass/style.scss */
+/* line 182, src/sass/style.scss */
 main .left .text {
   color: #a0a1ac;
   font-weight: 700;
@@ -274,13 +336,13 @@ main .left .text {
 }
 
 @media (max-width: 700px) {
-  /* line 141, src/sass/style.scss */
+  /* line 182, src/sass/style.scss */
   main .left .text {
     margin-bottom: 20px;
   }
 }
 
-/* line 152, src/sass/style.scss */
+/* line 193, src/sass/style.scss */
 main .left .btn-text .btn {
   border: none;
   border-radius: 10px;
@@ -292,18 +354,18 @@ main .left .btn-text .btn {
 }
 
 @media (max-width: 700px) {
-  /* line 152, src/sass/style.scss */
+  /* line 193, src/sass/style.scss */
   main .left .btn-text .btn {
     margin: 0;
   }
 }
 
-/* line 164, src/sass/style.scss */
+/* line 205, src/sass/style.scss */
 main .left .btn-text .btn:hover {
   background-color: rgba(255, 92, 92, 0.5);
 }
 
-/* line 169, src/sass/style.scss */
+/* line 210, src/sass/style.scss */
 main .left .btn-text span {
   color: #a0a1ac;
   letter-spacing: 4px;
@@ -311,7 +373,7 @@ main .left .btn-text span {
   font-size: 16px;
 }
 
-/* line 178, src/sass/style.scss */
+/* line 219, src/sass/style.scss */
 main .right {
   width: 50%;
   display: -webkit-box;
@@ -326,13 +388,13 @@ main .right {
 }
 
 @media (max-width: 700px) {
-  /* line 178, src/sass/style.scss */
+  /* line 219, src/sass/style.scss */
   main .right {
     width: 100%;
   }
 }
 
-/* line 186, src/sass/style.scss */
+/* line 227, src/sass/style.scss */
 main .right img {
   max-width: 100%;
   -webkit-transform: scale(2) translateX(25%);
@@ -340,17 +402,17 @@ main .right img {
 }
 
 @media (max-width: 700px) {
-  /* line 186, src/sass/style.scss */
+  /* line 227, src/sass/style.scss */
   main .right img {
-    -webkit-transform: scale(1.5) translateX(12%) translateY(20px);
-            transform: scale(1.5) translateX(12%) translateY(20px);
+    -webkit-transform: scale(1.5) translateX(77px) translateY(20px);
+            transform: scale(1.5) translateX(77px) translateY(20px);
   }
 }
 
-/* line 197, src/sass/style.scss */
+/* line 238, src/sass/style.scss */
 .footer {
   min-height: 5vh;
-  padding: 30px;
+  padding: 0 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -362,20 +424,20 @@ main .right img {
           justify-content: center;
 }
 
-/* line 203, src/sass/style.scss */
+/* line 244, src/sass/style.scss */
 .footer .attribution {
   color: #000000;
   text-align: center;
 }
 
-/* line 206, src/sass/style.scss */
+/* line 247, src/sass/style.scss */
 .footer .attribution a,
 .footer .attribution a:visited,
 .footer .attribution a:active {
   color: #ff5c5c;
 }
 
-/* line 211, src/sass/style.scss */
+/* line 252, src/sass/style.scss */
 .footer .attribution a:hover,
 .footer .attribution a:visited:hover,
 .footer .attribution a:active:hover {
